@@ -12,4 +12,4 @@ while j <= 100:
 
 for i in range (0, 100):
     if ajto[i] == 1:
-        print(i + 1)
+        print("Door", i + 1, "is open!")
