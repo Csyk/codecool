@@ -16,12 +16,30 @@ if (command == "mark"):
     print("\n".join(mylist))
     y = str(input())
 
-    see
+    #mylist[input()] = "[x] "
     for i in range(len(mylist)):
         x = "[ ]" + y + "\n"
         if x == mylist[i]:
-            mylist[i] = "[x]" + y
+            mylist[i] = "[x]" + y + "\n"
             print(mylist[i])
+
+    os.remove(fo.name)
+    fo=open("todo.txt","w")
+    for r in mylist:
+        fo.write(r)
+
+if (command == "archive"):
+    fo = open("todo.txt", "r+")
+    mylist = fo.readlines()
+    print("\n".join(mylist))
+    y = str(input())
+
+    #mylist[input()] = "[x] "
+    for u in mylist:
+        x = "[ ]" + y + "\n"
+        if x == mylist[u]:
+            del mylist[u]
+            print(mylist[u])
 
     os.remove(fo.name)
     fo=open("todo.txt","w")
