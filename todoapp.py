@@ -10,5 +10,11 @@ if (command == "add"):
 
 if (command == "mark"):
     fo = open("todo.txt", "r")
-    print (fo.read().count("[ ]" + input()))
-    #fo.seek(k) #odaugrik
+    mylist = fo.readlines()
+    print("\n".join(mylist))
+    y = str(input())
+    for i in range(len(mylist)):
+        x = "[ ]" + y
+        if x == mylist[i]:
+            mylist[i] = "[x]" + y
+            print(mylist[i])
